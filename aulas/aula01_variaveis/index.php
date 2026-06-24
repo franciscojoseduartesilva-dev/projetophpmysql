@@ -1,32 +1,3 @@
-<?php
-
-$data = date("d-m-Y");
-$hora = date("H:i:s");
-
-echo $data . " " . $hora;
-
-?>
-
-<br>
-
-<?php
-
-$valor = 10;
-
-if ($valor > 10):
-
-    echo "Numero e maior do que 10";
-
-
-else:
-    echo "Não é maior que 10";
-
-endif;
-
-
-
-
-?>
 <!doctype html>
 <html lang="en" data-bs-theme="light">
 
@@ -45,46 +16,80 @@ endif;
 </head>
 
 <body>
-    <header>
-        <!-- place navbar here -->
-    </header>
+    <!-- nav -->
+    <?php $numaula = "AULA 1" ?>
+    <?php require_once '../componentes/nav.php' ?>
+
+    <?php require_once '../componentes/header.php' ?>
+
     <main>
-        <div class="table-responsive mt-4">
-            <table class="table table-striped table-bordered">
-                <thead class="table-dark">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12"></div>
+
+                <?php
+
+                $nome = "jose silva";
+
+                $idade = "41";
+
+                $proficao = "Estudante";
+
+                $salario = "1618";
+
+                $Estado = "Ceara";
+
+                $email = "franciscojoseduartesilva@gmail.com";
+
+                $celular = "85 92773936";
+
+                $dataNacimento = "21/04/1985";
+
+
+                ?>
+                <table>
                     <tr>
-                        <th>Produto</th>
-                        <th>Quantidade</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Mouse</td>
-                        <td>25</td>
+                        <td class="label" width="250">👤 Nome</td>
+                        <td class="value"><?= $nome ?></td>
                     </tr>
                     <tr>
-                        <td>Teclado</td>
-                        <td>18</td>
+                        <td class="label">🎂 Idade</td>
+                        <td class="value"><?= $idade ?></td>
                     </tr>
                     <tr>
-                        <td>Monitor</td>
-                        <td>12</td>
+                        <td class="label">💼 Profissão</td>
+                        <td class="value"><?= $proficao ?></td>
                     </tr>
                     <tr>
-                        <td>Notebook</td>
-                        <td>8</td>
+                        <td class="label">💰 Salário</td>
+                        <td class="value"><?= $salario ?></td>
                     </tr>
                     <tr>
-                        <td>Impressora</td>
-                        <td>5</td>
+                        <td class="label">📍 Estado</td>
+                        <td class="value"><?= $Estado ?></td>
                     </tr>
-                </tbody>
-            </table>
+                    <tr>
+                        <td class="label">📧 E-mail</td>
+                        <td class="value"><?= $email ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">📱 Celular</td>
+                        <td class="value"><?= $celular ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">🗓️ Data de Nascimento</td>
+                        <td class="value"><?= $dataNacimento ?></td>
+                    </tr>
+                </table>
+
+            </div>
         </div>
+
+
     </main>
-    <footer>
-        <!-- place footer here -->
-    </footer>
+    <?php require_once '../componentes/footer.php' ?>
+
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
