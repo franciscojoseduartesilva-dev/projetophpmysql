@@ -18,20 +18,60 @@
     <body>
         <!-- nav -->
          <?php $numaula="Aula 2"?>
-         <?php require_once '../componentes/nav.php ' ?>
+         <?php require_once '../componentes/nav.php' ?>
 
-         <?php require_once '../componentes/header ' ?>
+         <?php require_once '../componentes/header.php' ?>
 
         <main>
              
-            <div class="conteiner">
+            <div class="container">
                 <div class="row">
-                    <div class="col-12"></div>
+                    <div class="col-12">
+                        <?php
+                          
+                          $nome = "paula lins";
+                          $valor = 100;
+                          $moeda = 15.59;
+                          $status = true;
+
+                        ?>
+
+                        <p>
+                            nome <br>
+                            <?php var_dump($nome); ?>
+                        </p>
+                        <p>
+                            valo : <br>
+                            <?php var_dump($valor); ?>
+                        </p>
+                        <p>
+                            nome <br>
+                            <?php var_dump($moeda); ?>
+                        </p>
+                        <p>
+                            nome <br>
+                            <?php var_dump($status); ?>
+                        </p>
+
+                        <h1>operadores</h1>
+                        <?php
+                        $valor1 = 1250;
+                        $valor2 = 15;
+
+                        ?>
+                        <h3>soma</h3>
+                        <?php $total = $valor1 + $valor2;  ?>
+                        A soma de <?php echo $valor1;?> 
+                        
+                        + <?php echo $valor2;?> e igual a :
+                        <?php echo $total;?>
+
+                    </div>
                 </div>
             </div>
 
         </main>
-        <?php require_once '../componentes/footer ' ?>
+        <?php require_once '../componentes/footer.php' ?>
 
         <!-- Bootstrap JavaScript Bundle (includes Popper) -->
         <script

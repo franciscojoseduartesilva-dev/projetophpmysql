@@ -16,13 +16,27 @@
     </head>
 
     <body>
-        <header>
-            <!-- place navbar here -->
-        </header>
-        <main></main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
+        <!-- nav -->
+         <?php $numaula="Aula 2"?>
+         <?php require_once '../componentes/nav.php' ?>
+
+         <?php require_once '../componentes/header.php' ?>
+
+        <main>
+             
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                       
+
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <?php require_once '../componentes/footer.php' ?>
+
         <!-- Bootstrap JavaScript Bundle (includes Popper) -->
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

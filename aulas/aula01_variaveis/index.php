@@ -26,7 +26,9 @@
 
         <div class="container">
             <div class="row">
+
                 <div class="col-12"></div>
+                <h1>Cadastro aluno</h1>
 
                 <?php
 
@@ -81,6 +83,130 @@
                         <td class="label">🗓️ Data de Nascimento</td>
                         <td class="value"><?= $dataNacimento ?></td>
                     </tr>
+                </table>
+
+                <h1>Desafio2</h1>
+
+                <?php
+                    $produto = "Notebook Dell Inspiron 15";
+
+                    $categoria = "Informática";
+
+                    $preco = "3499.90";
+
+                    $estoque ="300";
+
+                    
+                ?>
+                <h2>Cadastro de produto</h2>
+                <table>
+                    <tr>
+                        <td class="label" width="250">👤 produto</td>
+                        <td class="value"><?= $produto??'nao definido' ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">🎂 categoria</td>
+                        <td class="value"><?= $categoria??'nao definido' ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">💼 preco</td>
+                        <td class="value"><?= $preco??'nao definido' ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">💰 estoque</td>
+                        <td class="value"><?= $estoque??'nao definido' ?></td>
+                    </tr>
+                    
+                </table>
+
+
+                <h1>Desafio3</h1>
+
+                <?php
+                    $produto = "Fone de Ouvido Bluetoot";
+
+                    $precoUnitario = "199.99";
+
+                    $quantidade = "100";
+
+                ?>
+                <h2>produto</h2>
+                <table>
+                    <tr>
+                        <td class="label" width="250">👤 produto</td>
+                        <td class="value"><?= $produto ??'nao definido' ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">🎂 precoUnitario</td>
+                        <td class="value"><?= $precoUnitario??'nao definido' ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">💼 quantidade</td>
+                        <td class="value"><?= $quantidade??'nao definido' ?></td>
+                    </tr>
+                    
+                    
+                </table>
+
+                <h1>Desafio4</h1>
+
+                <?php
+                    $vendedor = "joao silva";
+
+                    $totalVendido = "16000.00";
+
+                    $percentualComissao = "10";
+
+                ?>
+                <h2>Comissao de vendedor</h2>
+                <table>
+                    <tr>
+                        <td class="label" width="250">👤 vendedor</td>
+                        <td class="value"><?= $vendedor??'nao definido' ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">🎂 Total vendas</td>
+                        <td class="value"><?= $totalVendido??'nao definido' ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">💼 $percentualComissao</td>
+                        <td class="value"><?= $quantidade??'nao definido' ?></td>
+                    </tr>
+                    
+                    
+                </table>
+
+                <h1>Desafio5</h1>
+
+                <?php
+                    $aluno = "carlos";
+
+                    $nota1 = "8.7";
+
+                    $nota2 = "9.6";
+
+                    $nota3 = "7.8";
+
+                ?>
+                <h2>media de notas</h2>
+                <table>
+                    <tr>
+                        <td class="label" width="250">👤 aluno</td>
+                        <td class="value"><?= $aluno??'nao definido' ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">🎂 nota1</td>
+                        <td class="value"><?= $nota1??'nao definido' ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">💼 $nota2</td>
+                        <td class="value"><?= $nota2??'nao definido' ?></td>
+                    </tr>
+                    <tr>
+                        <td class="label">💼 $nota3</td>
+                        <td class="value"><?= $nota3??'nao definido' ?></td>
+                    </tr>
+                    
                 </table>
 
             </div>

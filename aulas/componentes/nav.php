@@ -27,12 +27,14 @@
                             href="#"
                             role="button"
                             data-bs-toggle="dropdown">
-                            Produtos
+                            aulas
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Cadastrar</a></li>
-                            <li><a class="dropdown-item" href="#">Listar</a></li>
-                            <li><a class="dropdown-item" href="#">Categorias</a></li>
+                            <li><a class="dropdown-item" href="../aula01_variaveis/">aula 1 - variaveis</a></li>
+                            <li><a class="dropdown-item" href="../aula2/">aula2 - operadores </a></li>
+                            <li><a class="dropdown-item" href="../aula3/">aula3 - </a></li>
+                            <li><a class="dropdown-item" href="../aula4/">aula4 - </a></li>
+                            <li><a class="dropdown-item" href="../aula5/">aula5 - </a></li>
                         </ul>
                     </li>
 
