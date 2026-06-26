@@ -27,6 +27,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
+
+                        <h3>Desafio 1</h3>
                         <?php
                           
                           $nome = "paula lins";
@@ -63,8 +65,54 @@
                         <?php $total = $valor1 + $valor2;  ?>
                         A soma de <?php echo $valor1;?> 
                         
-                        + <?php echo $valor2;?> e igual a :
-                        <?php echo $total;?>
+                        + <?php echo $valor2?> e igual a :
+                        <?php echo $total?>
+
+                    
+
+
+                        <h3>Mutiplicacao</h3>
+
+                        <?php 
+                        $produto = "blusa";
+
+                        $precoUnitario = 300;
+
+                        $quantidade = 2;
+
+                        $totalvenda = $precoUnitario * $quantidade;
+
+                         ?>
+
+                        produto <?= $produto ?> foi vendida <?= $precoUnitario ?> <?= $quantidade?> unidade
+
+                        total da venda:  <?= $total ?> 
+
+
+                        <h3>Subtracao</h3>
+                        <?php 
+
+                        $vendedor = "bruno";
+
+
+                        $totalvendido = "3000";
+
+                        $percentualcomissao = "5";
+
+                        $vendedor = $totalvendido * $percentualcomissao;
+                        ?>
+
+                        vendedor <?= $vendedor ?> vededo <?= $totalvendido ?>  comissao
+
+                        total da comossao:  <?= $total ?> 
+
+
+
+
+                        <h3>Divisao</h3>
+
+
+
 
                     </div>
                 </div>

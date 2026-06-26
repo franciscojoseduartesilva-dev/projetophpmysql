@@ -1,3 +1,4 @@
+<?php require_once dirname(__DIR__). '/componentes/rotas.php';?>
 <!doctype html>
 <html lang="en" data-bs-theme="light">
     <head>
@@ -17,25 +18,45 @@
 
     <body>
         <!-- nav -->
-         <?php $numaula="Aula 2"?>
-         <?php require_once '../componentes/nav.php' ?>
+         <?php $numaula="Aula 3-rotas (caminhos)"?>
+         <?php require_once  APP_COMPONENTES.'/nav.php';?>
 
-         <?php require_once '../componentes/header.php' ?>
+         <?php require_once APP_COMPONENTES.'/header.php' ?>
 
         <main>
              
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                       
 
+                       <h3> __DIR__ caminho absoluto</h3>
 
+                       <?php echo __DIR__;?>
+
+                       <h3>dirname(__DIR__)recuar um diretorio</h3>
+
+                       <?= dirname(__DIR__); ?>
+
+                       <h3>dirname(__DIR__,2)</h3>
+
+                        <?= dirname(__DIR__,2); ?>
+
+                        <h3>definindo variavel de rotas</h3>
+
+                        <h4>define("APP_ROOT",__DIR__)</h4>
+
+                        <?php define("APP_ROOT",__DIR__); ?>
+
+                        <?= APP_ROOT;?>
+
+                        <h3>ROTAS ABSOLUTA</h3>
+                        
                     </div>
                 </div>
             </div>
 
         </main>
-        <?php require_once '../componentes/footer.php' ?>
+        <?php require_once APP_COMPONENTES.'/footer.php' ?>
 
         <!-- Bootstrap JavaScript Bundle (includes Popper) -->
         <script
