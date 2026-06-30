@@ -1,10 +1,8 @@
-
-    <!-- nav -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
 
             <!-- Logo / Nome do Projeto -->
-            <a class="navbar-brand fw-bold" href="../../">
+            <a class="navbar-brand fw-bold" href="#">
                 Controle de Estoque
             </a>
 
@@ -24,26 +22,24 @@
                     <!-- Dropdown 1 -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle"
-                            href="#"
-                            role="button"
-                            data-bs-toggle="dropdown">
-                            aulas
+                           href="#"
+                           role="button"
+                           data-bs-toggle="dropdown">
+                            Produtos
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../aula01_variaveis/">aula 1 - variaveis</a></li>
-                            <li><a class="dropdown-item" href="../aula2/">aula2 - operadores </a></li>
-                            <li><a class="dropdown-item" href="../aula3/">aula3 - rotas </a></li>
-                            <li><a class="dropdown-item" href="../aula4/">aula4 - </a></li>
-                            <li><a class="dropdown-item" href="../aula5/">aula5 - </a></li>
+                            <li><a class="dropdown-item" href="#">Cadastrar</a></li>
+                            <li><a class="dropdown-item" href="#">Listar</a></li>
+                            <li><a class="dropdown-item" href="#">Categorias</a></li>
                         </ul>
                     </li>
 
                     <!-- Dropdown 2 -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle"
-                            href="#"
-                            role="button"
-                            data-bs-toggle="dropdown">
+                           href="#"
+                           role="button"
+                           data-bs-toggle="dropdown">
                             Movimentações
                         </a>
                         <ul class="dropdown-menu">
@@ -56,9 +52,9 @@
                     <!-- Dropdown 3 -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle"
-                            href="#"
-                            role="button"
-                            data-bs-toggle="dropdown">
+                           href="#"
+                           role="button"
+                           data-bs-toggle="dropdown">
                             Configurações
                         </a>
                         <ul class="dropdown-menu">
@@ -67,6 +63,17 @@
                             <li><a class="dropdown-item" href="#">Preferências</a></li>
                         </ul>
                     </li>
+
+                    <!-- Dropdown 3 -->
+                    <li class="nav-item ">
+                        <a class="nav-link dropdown-toggle"
+                           href="aulas/aula01_variaveis/">
+                           
+                            aulas
+                        </a>
+                        
+                    </li>
+
 
                 </ul>
             </div>
