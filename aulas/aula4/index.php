@@ -117,9 +117,92 @@
                             echo "reprovado";
                         }
 
+                    ?>
 
+                    <h4>desafio da maior idade</h4>
+
+                    <?php
+                        $nome = "";
+
+                        $idade = 18;
+                        
+                        
+                        if ($idade>= 18) {
+                                echo "<div class='alert alert-success'>";
+                                echo "Acesso permitido para " .$idade;
+                                echo "</div>";
+                            } else {
+                                echo "<div class='alert alert-danger'>";
+                                echo "Acesso negado para " .$idade;
+                                echo "</div>";
+                            }
+
+
+                    ?>
+                    <h4>aprovacao por media</h4>
+
+                    <?php
+                    $aluno = "joao";
+
+                    $media = 9;
+
+                    echo "<p>aluno: ".$aluno. "</p>";
+
+                    echo "<P>media: " .$media ."</P>";
+
+
+                    if ($media>= 7) {
+                        echo "<div class='alert alert-success'>
+                        aluno aprovado.</div>";
+
+                    } else {
+                        echo "<div class='alert alert-danger'>aluno reprovado.</div>";
+                    }
+
+                    ?>
+
+                    <h4>classificação escolar com elseif</h4>
+
+                    <?php
+                    
+                    $aluno = "paulo";
+
+                    $media = 7;
+
+
+                    if ($media>= 7) {
+                        echo "<div class='alert alert-success'>aprovado</div>";
+
+                    } elseif ($media>= 5) {
+                        echo "<div class='alert alert-warning'>recuperação</div>";
+
+                    } else {
+                        echo "<div class='alert alert-danger'>reprovado</div>";
+                    }
 
                      ?>
+
+
+                    <h4>verificação de estoque</h4>
+
+                    <?php
+                    
+                    $produto = "";
+                    $estoque = 10;
+
+                    echo "<p>produto: " .$produto. "</p>";
+
+                    echo "<p>estoque atual: ".$estoque ."</p>";
+
+                    if ($estoque>= 10) {
+                        echo "<div class='alert alert-warning'>estoque baixo.
+                        atenção para reposição</div>";
+
+                    } else {
+                        echo "<div class='alert alert-danger'>produto sem estoque.</div>";
+                    }
+                     ?>
+
 
                 </div>
             </div>
