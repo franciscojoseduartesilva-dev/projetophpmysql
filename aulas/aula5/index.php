@@ -95,6 +95,8 @@
                      ?>
 
                     <p>
+                        <h2>desafio1</h2>
+
                         <?php 
                         for ($i = 0;$i<$quant;$i++) {
                             
@@ -105,6 +107,38 @@
                          
                     </p>
 
+
+                    <p>
+                        <h2>desafio2</h2>
+                       
+                        <h4>Contagem Regressiva</h4>
+
+                        <?php
+                        for ($i = 10; $i >= 1; $i--) {
+                             echo "<p class='badge bg-warning text-dark me-1'>" . $i . "</p>";
+
+                        }
+
+                        ?>
+
+                    </p>
+
+                    <p>
+                        <h2>desafio3</h2>
+                        <h4>tabuada com php</h4>
+                        <?php
+                        $numero = 5;
+
+                        echo "<div class='card p-3 shadow-sm'";
+                        echo "<h3>tabuada do " .$numero. "</h3>";
+                        for ($i = 1; $i <= 10; $i++) {
+                            $resultado = $numero * $i;
+                            echo $numero . "x" . $i . "=" .$resultado. "<br>";
+                        }
+                        echo "</div>";
+
+                        ?>
+                    </p>
 
 
 

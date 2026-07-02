@@ -203,6 +203,23 @@
                     }
                      ?>
 
+                     <h4>Login simples</h4>
+
+                     <?php
+                     $emaildigitdo = "aluno@curso.com";
+                     
+                     $senhadigitada = "123456";
+
+                     $emailcorreto = "aluno@curso.com";
+                     $senhacorreta = "123456";
+
+                     if ($emaildigitdo==$emailcorreto && $senhadigitada == $senhacorreta) {
+                        echo "<div class='alert alert-success'>login realizado com sicesso.</div>";
+                     } else {
+                        echo "div class='alert alert-danger'>email ou seha invalida.</div";
+                     }
+                      ?>
+
 
                 </div>
             </div>
