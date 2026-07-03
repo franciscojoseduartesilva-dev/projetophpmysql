@@ -36,6 +36,7 @@
                             <li><a class="dropdown-item" href="../aula4/">aula4 - condicional if</a></li>
                             <li><a class="dropdown-item" href="../aula5/">aula5 - for while</a></li>
                             <li><a class="dropdown-item" href="../aula6/">aula6 - arrays </a></li>
+                            <li><a class="dropdown-item" href="../aula7/">aula7 - config </a></li>
                         </ul>
                     </li>
 

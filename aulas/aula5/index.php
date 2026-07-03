@@ -65,10 +65,6 @@
                         </div>
                             ';
                     }
-
-
-
-
                     ?>
 
                     <h4>For com array</h4>

@@ -29,6 +29,7 @@
             <div class="row">
                 <div class="col-12">
                     <h3>Título estudo</h3>
+                    <h3>desafio1</h3>
 
                     <?php
                     $produtos = ["Mouse", "Teclado", "Monitor"];
@@ -41,6 +42,7 @@
                     ?>
 
                     <h4>Array + foreach</h4>
+                    
 
                     <?php
                     $pessoas = [
@@ -58,6 +60,7 @@
                         echo $key+1 ."nome:" .$mickey. "<br>";
                     }
                      ?>
+                     <h3>desafio2</h3>
 
                      <h3>Array Associativa</h3>
 
@@ -74,7 +77,8 @@
                       Nome: <?php echo $pessoas["nome"]; ?> <br>
                       idade: <?=$pessoas["idade"]; ?> <br>
                       Naturalidade: <?= $pessoas["Naturalidade"]; ?> <br>
-
+                      
+                        
                       <h4>Array mutidimensonal</h4>
 
                       <?php
@@ -97,12 +101,115 @@
                         "estoque" => 3
                         ]
 
-                        ]
+                        ];
+                        for ($i = 0; $i < count($produtos); $i++) {
+                            echo "<p>";
+                            echo "Produto: " . $produtos[$i]["nome"] . "<br>";
+                            echo "Preço: R$ " . number_format($produtos[$i]["preco"], 2, ',', '.') . "<br>";
+                            echo "Estoque: " . $produtos[$i]["estoque"];
+                            echo "</p>";
+                        };
                        ?>
 
+                       <h3>DESAFIO 4 — Card de produto com array associativo</h3>
+                       <?php
+                       $produto = [
+                        "nome" => "Teclado Mecanico",
+                        "categoria" => "Informatica",
+                        "preco" => 250.00,
+                        "estoque" => 8
+                       ]; 
+                        ?>
+                        <div class="row justify-content-center">
+                            <div class="col-md5">
+                                <div class="card shadow-sm text-center">
+                                    <div class="card-body">
+                                       <h5 class="card-title"><?= $produto["nome"]; ?></h5> 
+                                        <p class="card-text">categoria: <strong><?=  $produto["categoria"]; ?></strong>
+                                        </p>
+                                        <p class="card-text">
+                                            preco: <R$>
+                                            <!-- formate o preco usando number_format -->
+                                        </p>
+
+                                        <p class="card-text">
+                                            estoque:
+                                            <!-- exiba o estoque aqui -->
+
+                                        </p>
+
+                                        <a href="#" class="btn btn-primary">ver produto</a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <h3>DESAFIO 5 — Array multidimensional de produtos</h3>
+                        <?php
+                        $produtos = [
+                            [
+                            "nome" => "mouse",
+                            "categoria" => "informatica",
+                            "preco" => 80.00,
+                            "estoque" => 10
+                        ],
+
+                        [
+                            "nome" => "caderno",
+                            "categoria" => "escritorio",
+                            "preco" => 25.00,
+                            "estoque" => 30
+
+                        ] 
+                        // adicione mais 3 produtos
+                        ];
+                        [
+                            "nome" => "teclado",
+                            "categoria" => "informatica",
+                            "preco" => 25.00,
+                            "estoque" => 15
+                        ];
+
+                        [
+                            "nome" => "caneta",
+                            "categoria" => "escritorio",
+                            "preco" => 5.00,
+                            "estoque" => 90
+                        ];
+                        [
+                            "nome" => "monitor",
+                            "categoria" => "informatica",
+                            "preco" => 980.00,
+                            "estoque" => 10
+                        ];
+
+                         ?>
+                        <?php foreach ($produtos as $produto) { ?>
+                            <p>
+                                <strong><?= $produto["nome"]; ?></strong>
+                                -
+                                <?= $produto["categoria"]; ?>
+                            </p>
+                        <?php } ?>
 
 
-                </div>
+
+
+
+
+
+
+
+                    </div>                                
+
+
+                </div>                  
+
+
             </div>
         </div>
 

@@ -1,4 +1,4 @@
- 
+ <?php require_once __DIR__ . '/componentes/config.php'; ?>
  <?php require_once __DIR__ . '/componentes/rotas.php'; ?>
 
 <!DOCTYPE html>

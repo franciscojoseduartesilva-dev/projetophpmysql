@@ -3,11 +3,26 @@
         <div class="row align-items-center">
             <div class="col-lg-8">
                 <h1 class="display-5 fw-bold mb-3">
-                    📦 Controle de Estoque
+                    
+                     Controle de Estoque
+                    
+                    
+
                 </h1>
                 <p class="lead mb-0">
                     Gerencie produtos, categorias e movimentações de estoque de forma
                     rápida, organizada e segura.
+                    <?php echo $data; ?>
+                    <?php echo $hora; ?>
+                    <?php echo databr(); ?>
+                    <?php echo horabr();?>
+                    <br>
+                    <?php
+                    
+                    echo $enc = encrypt_secure("123456",'e');
+                    
+                     ?>
+                    
                 </p>
             </div>
 
@@ -19,6 +34,15 @@
                     Movimentações
                 </a>
             </div>
+            <br>
+
+            <?php
+             echo $dec = encrypt_secure($enc,'d');
+             ?>
+
+
+
+
         </div>
     </div>
 </header>
