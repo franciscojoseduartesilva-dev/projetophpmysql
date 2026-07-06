@@ -214,7 +214,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
      <?php
       $vencimento = somardias('2026-07-02', 20);
 
-echo $vencimento;
+        echo $vencimento;
 
       ?>
       <?php
@@ -239,6 +239,32 @@ echo $vencimento;
     return bin2hex(random_bytes($tamanho / 2));
 }
 
-$chave = gerarChaveUnica();
+    $chave = gerarChaveUnica();
+
 
         ?>
+
+    
+<?php
+function pegarIp(): string
+{
+    $keys = [
+        'HTTP_CF_CONNECTING_IP',
+        'HTTP_X_FORWARDED_FOR',
+        'REMOTE_ADDR'
+    ];
+    foreach ($keys as $key) {
+        if (!empty($_SERVER[$key])) {
+            $ip = trim((string) $_SERVER[$key]);
+            if ($key === 'HTTP_X_FORWARDED_FOR') {
+                $partes = explode(',', $ip);
+                $ip = trim($partes[0]);
+            }
+            return mb_substr($ip, 0, 45, 'UTF-8');
+        }
+    }
+    return 'IP não identificado';
+}
+?>
+
+    
