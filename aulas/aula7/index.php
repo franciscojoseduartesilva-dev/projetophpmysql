@@ -52,7 +52,7 @@
                     if(!empty($_GET['enc'])){
                     echo encrypt_secure($_GET['enc'], 'd');
 
-                    } 
+                    }
                      ?>
 
                      
@@ -109,8 +109,8 @@
                         $decpost = encrypt_secure($encpost, 'd');
                     } 
                      ?>
-                    post encryptado : <?php echo $encpost;$variavel??'nao definida' ?>  <br>
-                    post decryptado : <?php echo $decpost;$variavel??'nao definida'  ?>  <br>
+                    post encryptado : <?php echo $encpost;$variavel??'nao definida' ?> <br>
+                    post decryptado : <?php echo $decpost;$variavel??'nao definida'  ?> <br>
                     
 
                     <h3>5.login e senha</h3>
@@ -136,8 +136,8 @@
                         $decpost = encrypt_secure($encpost, 'd');
                     } 
                      ?>
-                    post encryptado : <?php echo $encpost; ?>  <br>
-                    post decryptado : <?php echo $decpost;?>  <br>
+                    post encryptado : <?php echo $encpost;$variavel??'nao definida' ?> <br>
+                    post decryptado : <?php echo $decpost;$variavel??'nao definida'?> <br>
                     
 
                     

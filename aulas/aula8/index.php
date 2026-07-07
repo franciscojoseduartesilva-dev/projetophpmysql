@@ -1,3 +1,4 @@
+<?php require_once dirname(__DIR__) . '/componentes/config.php'; ?>
 <?php require_once dirname(__DIR__) . '/componentes/rotas.php'; ?>
 <!doctype html>
 <html lang="en" data-bs-theme="light">
@@ -28,8 +29,59 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3>Título estudo</h3>
+                    <h3>Uso de $_SESSION</h3>
+                    <a class="btn btn-success btn-sm" href="action.php?nomeUser=jose silva">
+                        Nme Usuario : jose silva
+                    </a>
+                    <a class="btn btn-success btn-sm" href="action.php?senhaUser=123456">
+                        senha de usuario :123456
 
+                    </a>
+
+                    <p>
+
+                     <?php
+                     if(!empty($_SESSION['nomeuser'])) {
+                        echo $_SESSION['nomeuser'];
+
+                     } ?>
+<br>
+                     <?php
+
+                     if(!empty($_SESSION['senhauser'])) {
+                        echo $_SESSION['senhauser'];
+
+                     }
+                        
+
+
+                     ?>
+                    </p>
+
+                    <h3>login e senha com botão</h3>
+                    <a href="paineladmin.php">painel Admin</a>
+                    <form method="post" action="action.php" class="card card-body shadow-sm mb-4">
+                        <h4>Login e senha</h4>
+
+                        <div class="mb-3">
+                            <label for="email_login" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email_login" name="email_login" placeholder="Digite seu e-mail">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="senha_login" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="senha_login" name="senha_login" placeholder="Digite sua senha">
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Entrar</button>
+                    </form>
+                        
+                    
+
+
+
+                    
+                     
 
                 </div>
             </div>

@@ -37,6 +37,7 @@
                             <li><a class="dropdown-item" href="../aula5/">aula5 - for while</a></li>
                             <li><a class="dropdown-item" href="../aula6/">aula6 - arrays </a></li>
                             <li><a class="dropdown-item" href="../aula7/">aula7 - config </a></li>
+                            <li><a class="dropdown-item" href="../aula8/">aula8 - $sessao </a></li>
                         </ul>
                     </li>
 

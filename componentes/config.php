@@ -6,6 +6,24 @@ define('BASEPATH', true);
 
 header('Content-Type: text/html; charset=utf-8');
 ?>
+<?php
+ define('SESSION_TTL', 60 * 60 * 5);
+
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    ini_set('session.gc_maxlifetime', (string) SESSION_TTL);
+    ini_set('session.cookie_lifetime', (string) SESSION_TTL);
+
+    session_set_cookie_params([
+        'path'     => '/',
+        'secure'   => (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'),
+        'httponly' => true,
+        'samesite' => 'Lax',
+    ]);
+
+    session_start();
+}
+
+ ?>
 
 <?php
  setlocale(LC_ALL, "pt_BR", "pt_BR.iso-8859-1", "pt_BR.utf-8", "portuguese");
@@ -68,24 +86,7 @@ function horabr($hora = null)
 //echo horabr('15:12:45');
 ?>
 
-<?php
- define('SESSION_TTL', 60 * 60 * 5);
 
-if (session_status() !== PHP_SESSION_ACTIVE) {
-    ini_set('session.gc_maxlifetime', (string) SESSION_TTL);
-    ini_set('session.cookie_lifetime', (string) SESSION_TTL);
-
-    session_set_cookie_params([
-        'path'     => '/',
-        'secure'   => (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'),
-        'httponly' => true,
-        'samesite' => 'Lax',
-    ]);
-
-    session_start();
-}
-
- ?>
 
  <?php
  
