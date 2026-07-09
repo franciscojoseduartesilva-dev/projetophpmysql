@@ -76,12 +76,99 @@
                         <button type="submit" class="btn btn-success">Entrar</button>
                     </form>
                         
+                    <h3>teste php</h3>
+                    <?php
+                    
+                    $produto= "pasta";
+                    $valor= "5";
+                    $quantidade = "50";
+
+                     ?>
+
+                     <p>
+                        produto: <?php echo $produto; ?><br>
+                        valor: <?php echo $valor; ?><br>
+                        quantidade: <?php echo $quantidade; ?>br                     
+                        total: <?php echo $quantidade *$valor ?>br
+                    </p>
+                    
+                     <h3>banco</h3>
+                     <?php
+                     $bancobs= "bancobs";
+                     $saldo= "100";
+                     $deposito= "200";
+                     $saldototal= $saldo + $deposito;
+
+                      ?>
+
+                      <p>
+                        nome do Banco: <?php echo $bancobs; ?><br>
+                        $saldo: <?php echo $saldo; ?><br>
+                        $deposito: <?php echo $deposito; ?><br>
+                        $saldototal: <?php echo $saldototal; ?><br>
+
+
+                      </p>
+
+                      <h3>criar variaveis</h3>
+                      <?php
+                      $produto= "sabonete";
+                      $valor= 10;
+                      $desconto= 5;
+                      $valorfinal= $valor-$desconto; 
+                       ?>
+
+                       <p>
+                        $produto: <?php echo $produto; ?><br>
+                        $valor: <?php echo $valor; ?><br>
+                        $desconto: <?php echo $desconto; ?><br>
+                        $valorfinal: <?php echo $valorfinal; ?><br>
+                       </p>
+
+                       <h3>crie uma variavel  email coloque um valor para esta variavel </h3>
+                       <?php
+                       $email= "maria@gmail.com";
+                       $enc = encrypt_secure ($email, 'e');
+
+                       $email= "maria@gmail.com";
+                       $dec = encrypt_secure ($enc, 'd');
                     
 
+                        ?>
 
 
+                        email: <?php echo $email ?><br>
+                        emailencryptado: <?php echo encrypt_secure($email, 'e') ?><br>
+
+                        email: <?php echo $email ?><br>
+                        emaildecryptado: <?php echo $dec ?><br>
+                        
+                        <h3>criar um link com uma variavel chave com os valores "we252563"</h3>
                     
-                     
+                        <a href="?chave=252563>link com chave">enviando link</a>
+                        <?php
+                        
+                        if(!empty($_GET['chave'])){
+                            $chave=$_GET['chave'];
+                            $chaveenc = encrypt_secure($chave, 'e');
+                            $echavedec = encrypt_secure($chaveenc,'d');
+
+                        
+                        }
+                        
+                        ?>
+
+                        chave: <?php echo $chave;?><br>
+                        chave encryptada: <?php echo $chaveenc??''?>
+                        chave decryptada: <?php echo $echavedec??'' ?>
+                        
+                        
+
+                        
+
+                         
+
+
 
                 </div>
             </div>

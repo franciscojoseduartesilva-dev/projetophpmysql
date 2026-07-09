@@ -1,11 +1,25 @@
 <?php require_once dirname(__DIR__) . '/componentes/config.php'; ?>
 <?php
 
-if(empty($_SESSIOM['eserstatus'])) {
-    header('location:index.php');
+if(!empty($_GET['logout']) && $_GET['logout']=="ok") {
+    $_SESSION = [];
+    session_destroy();
+    header('Location:paineladmin.php');
+    exit();
+
+
+
+
+}
+
+if(empty($_SESSION['userstatus'])) {
+    header('Location:index.php');
     exit();
 }
  ?>
+ 
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -163,8 +177,38 @@ if(empty($_SESSIOM['eserstatus'])) {
             }
         }
     </style>
+
+      <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
+    <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Deseja  sair dessa sessão
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="?logout=ok" class="btn btn-primary">confirmar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
     <aside class="sidebar">
         <h2>Admin</h2>
@@ -175,7 +219,7 @@ if(empty($_SESSIOM['eserstatus'])) {
             <li><a href="#">📦 Produtos</a></li>
             <li><a href="#">🛒 Pedidos</a></li>
             <li><a href="#">⚙ Configurações</a></li>
-            <li><a href="#">🚪 Sair</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">🚪 Sair</a></li>
         </ul>
     </aside>
 
@@ -257,5 +301,6 @@ if(empty($_SESSIOM['eserstatus'])) {
 
     </main>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
