@@ -271,4 +271,3 @@ function pegarIp(): string
 }
 ?>
 
-    

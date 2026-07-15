@@ -237,9 +237,14 @@ echo $vencimento;
        <?php
         function gerarChaveUnica($tamanho = 8)
 {
-    return bin2hex(random_bytes($tamanho / 2));
+        return bin2hex(random_bytes($tamanho / 2));
 }
 
 $chave = gerarChaveUnica();
 
         ?>
+
+        <?php
+        $con = config::connect(); 
+        ?>
+    
