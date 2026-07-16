@@ -17,26 +17,21 @@
 </head>
 
 <body>
-    <!-- nav -->
-    <?php $numaula = "Aula 5" ?>
-    <?php require_once  APP_COMPONENTES . '/nav.php'; ?>
-
-    <?php require_once APP_COMPONENTES . '/header.php' ?>
-
+    <?php $numaula = "Aula 4"; ?>
+    <?php require_once APP_COMPONENTES . '/nav.php'; ?>
+    <?php require_once APP_COMPONENTES . '/header.php'; ?>
     <main>
-
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3>Título estudo</h3>
-
+                    
 
                 </div>
             </div>
         </div>
-
     </main>
-    <?php require_once '../componentes/footer.php' ?>
+
+    <?php require_once APP_COMPONENTES . '/footer.php'; ?>
 
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script

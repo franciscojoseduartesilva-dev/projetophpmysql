@@ -1,13 +1,12 @@
 <?php
-
 declare(strict_types=1);
-
 define('BASEPATH', true);
-
 header('Content-Type: text/html; charset=utf-8');
 ?>
+
 <?php
- define('SESSION_TTL', 60 * 60 * 5);
+
+define('SESSION_TTL', 60 * 60 * 5);
 
 if (session_status() !== PHP_SESSION_ACTIVE) {
     ini_set('session.gc_maxlifetime', (string) SESSION_TTL);
@@ -23,21 +22,19 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
 }
 
- ?>
+
+?>
 
 <?php
- setlocale(LC_ALL, "pt_BR", "pt_BR.iso-8859-1", "pt_BR.utf-8", "portuguese");
-
+setlocale(LC_ALL, "pt_BR", "pt_BR.iso-8859-1", "pt_BR.utf-8", "portuguese");
 date_default_timezone_set('America/Fortaleza');
-
 $hr = "0";
 $hora = date("H:i:s", time() - ($hr));
 $data = date("Y-m-d");
 
- ?>
+?>
 
- 
-  
+
 <?php
 
 function databr($data = null)
@@ -59,11 +56,10 @@ function databr($data = null)
 
 // Exemplo com data específica
 //echo databr('2026-07-03');
-
-
 ?>
 
-  
+
+
 <?php
 
 function horabr($hora = null)
@@ -88,9 +84,11 @@ function horabr($hora = null)
 
 
 
- <?php
- 
- function encrypt_secure($value, $action = 'e')
+
+
+<?php
+
+function encrypt_secure($value, $action = 'e')
 {
     $secret_key = 'mickey';
     $secret_iv = 'pateta';
@@ -150,11 +148,12 @@ function horabr($hora = null)
 
 // $enc = encrypt_secure("123456",'e');
 // $dec = encrypt_secure($enc,'d');
+?>
 
-  ?>
 
-  <?php
-   function gerachave()
+<?php
+
+function gerachave()
 {
     $min = "1";
     $max = "10";
@@ -179,10 +178,13 @@ function horabr($hora = null)
     return $rand;
 }
 
-   ?>
 
-   <?php
-    function gerachaveshorttag()
+?>
+
+
+<?php
+
+function gerachaveshorttag()
 {
     $length = 5;
 
@@ -199,10 +201,14 @@ function horabr($hora = null)
     return $rand;
 }
 
-    ?>
 
-    <?php
-     function somardias($data, $dias)
+?>
+
+
+<?php
+
+
+function somardias($data, $dias)
 {
     $datanew = new DateTime($data);
     $datanew->modify('+ ' . $dias . ' days');
@@ -210,16 +216,15 @@ function horabr($hora = null)
     return $datanew->format('Y-m-d');
 }
 
-     ?>
+//$vencimento = somardias('2026-07-02', 20);
 
-     <?php
-      $vencimento = somardias('2026-07-02', 20);
 
-echo $vencimento;
+?>
 
-      ?>
-      <?php
-       function diferencadedata($data, $hora)
+
+<?php
+
+function diferencadedata($data, $hora)
 {
     $publicationDateTimeString = $data . ' ' . $hora;
     $publicationDateTime = new DateTime($publicationDateTimeString);
@@ -232,19 +237,25 @@ echo $vencimento;
     return $seg;
 }
 
-       ?>
+//$difrenca =diferencadedata('2026-07-02', $hora)
 
-       <?php
-        function gerarChaveUnica($tamanho = 8)
+?>
+
+<?php
+
+function gerarChaveUnica($tamanho = 8)
 {
-        return bin2hex(random_bytes($tamanho / 2));
+    return bin2hex(random_bytes($tamanho / 2));
 }
-
 $chave = gerarChaveUnica();
 
-        ?>
 
-        <?php
-        $con = config::connect(); 
-        ?>
-    
+
+?>
+
+<?php
+
+// $con = config::connect();
+
+
+?>

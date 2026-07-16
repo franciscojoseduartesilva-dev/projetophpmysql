@@ -1,73 +1,62 @@
-
-    <!-- nav -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
 
-            <!-- Logo / Nome do Projeto -->
+            <!-- Nome do projeto à esquerda -->
             <a class="navbar-brand fw-bold" href="../../">
-                Controle de Estoque
+                Controle de Estoque*
             </a>
 
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+            <!-- Botão do menu mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Links à direita -->
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-                <!-- Menus alinhados à direita -->
-                <ul class="navbar-nav ms-auto">
-
-                    <!-- Dropdown 1 -->
+                    <!-- Dropdown Produtos -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle"
-                            href="#"
-                            role="button"
-                            data-bs-toggle="dropdown">
-                            aulas
+                        <a class="nav-link dropdown-toggle" href="#" id="produtosDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Aulas
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../aula01_variaveis/">aula 1 - variaveis</a></li>
-                            <li><a class="dropdown-item" href="../aula2/">aula2 - operadores </a></li>
-                            <li><a class="dropdown-item" href="../aula3/">aula3 - rotas </a></li>
-                            <li><a class="dropdown-item" href="../aula4/">aula4 - condicional if</a></li>
-                            <li><a class="dropdown-item" href="../aula5/">aula5 - for while</a></li>
-                            <li><a class="dropdown-item" href="../aula6/">aula6 - arrays </a></li>
-                            <li><a class="dropdown-item" href="../aula7/">aula7 - config </a></li>
-                            <li><a class="dropdown-item" href="../aula8/">aula8 - $sessao </a></li>
+                        <ul class="dropdown-menu" aria-labelledby="produtosDropdown">
+                            <li><a class="dropdown-item" href="../aula01_variaveis/">Aula 1 - Variáveis</a></li>
+                            <li><a class="dropdown-item" href="../aula02/">Aula 2 - Operadores</a></li>
+                            <li><a class="dropdown-item" href="../aula03/">Aula 3 - Rotas</a></li>
+                            <li><a class="dropdown-item" href="../aula04/">Aula 4 - Condicional if</a></li>
+                            <li><a class="dropdown-item" href="../aula05/">Aula 5 - For While </a></li>
+                            <li><a class="dropdown-item" href="../aula06/">Aula 6 - Array</a></li>
+                            <li><a class="dropdown-item" href="../aula07/">Aula 7 - Config</a></li>
+                            <li><a class="dropdown-item" href="../aula08/">Aula 8 - $_SESSION</a></li>
                         </ul>
                     </li>
 
-                    <!-- Dropdown 2 -->
+                    <!-- Dropdown Clientes -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle"
-                            href="#"
-                            role="button"
-                            data-bs-toggle="dropdown">
-                            Movimentações
+                        <a class="nav-link dropdown-toggle" href="#" id="clientesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Clientes
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Entradas</a></li>
-                            <li><a class="dropdown-item" href="#">Saídas</a></li>
-                            <li><a class="dropdown-item" href="#">Relatórios</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="clientesDropdown">
+                            <li><a class="dropdown-item" href="#">Listar Clientes</a></li>
+                            <li><a class="dropdown-item" href="#">Cadastrar Cliente</a></li>
+                            <li><a class="dropdown-item" href="#">Histórico de Compras</a></li>
                         </ul>
                     </li>
 
-                    <!-- Dropdown 3 -->
+                    <!-- Dropdown Relatórios -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle"
-                            href="#"
-                            role="button"
-                            data-bs-toggle="dropdown">
-                            Configurações
+                        <a class="nav-link dropdown-toggle" href="#" id="relatoriosDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Relatórios
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Usuários</a></li>
-                            <li><a class="dropdown-item" href="#">Permissões</a></li>
-                            <li><a class="dropdown-item" href="#">Preferências</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="relatoriosDropdown">
+                            <li><a class="dropdown-item" href="#">Estoque Atual</a></li>
+                            <li><a class="dropdown-item" href="#">Produtos em Falta</a></li>
+                            <li><a class="dropdown-item" href="#">Movimentações</a></li>
                         </ul>
                     </li>
 

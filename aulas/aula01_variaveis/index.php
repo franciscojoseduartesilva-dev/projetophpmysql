@@ -6,216 +6,134 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <!-- Bootstrap CSS v5.3.8 -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
         crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
     <!-- nav -->
-    <?php $numaula = "AULA 1" ?>
-    <?php require_once '../componentes/nav.php' ?>
-
+    <?php $numaula = "Aula 1-Variáveis"; ?>
+    <?php require_once '../componentes/nav.php'  ?>
     <?php require_once '../componentes/header.php' ?>
-
     <main>
-
         <div class="container">
             <div class="row">
+                <div class="col-12">
+                    <h1>Cadastro aluno</h1>
 
-                <div class="col-12"></div>
-                <h1>Cadastro aluno</h1>
-
-                <?php
-
-                $nome = "jose silva";
-
-                $idade = "41";
-
-                $proficao = "Estudante";
-
-                $salario = "1618";
-
-                $Estado = "Ceara";
-
-                $email = "franciscojoseduartesilva@gmail.com";
-
-                $celular = "85 92773936";
-
-                $dataNacimento = "21/04/1985";
+                    <?php
+                    $nome = "Eugênio Márcio";
+                    $idade = 55;
+                    $profissao = "Instrutor de Programação";
+                    $salario = 51450;
+                    $estado = "Ceará";
+                    $email = "professoreugeniomls@gmail.com";
+                    $celular = "85-99781.0324";
+                    $datanascimento = "07-03-1971";
+                    ?>
 
 
-                ?>
-                <table>
-                    <tr>
-                        <td class="label" width="250">👤 Nome</td>
-                        <td class="value"><?= $nome ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">🎂 Idade</td>
-                        <td class="value"><?= $idade ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">💼 Profissão</td>
-                        <td class="value"><?= $proficao ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">💰 Salário</td>
-                        <td class="value"><?= $salario ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">📍 Estado</td>
-                        <td class="value"><?= $Estado ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">📧 E-mail</td>
-                        <td class="value"><?= $email ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">📱 Celular</td>
-                        <td class="value"><?= $celular ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">🗓️ Data de Nascimento</td>
-                        <td class="value"><?= $dataNacimento ?></td>
-                    </tr>
-                </table>
+<table class="table table-bordered table-striped align-middle">
+    <thead class="table-dark">
+        <tr>
+            <th style="width: 250px;">Campo</th>
+            <th>Informação</th>
+        </tr>
+    </thead>
 
-                <h1>Desafio2</h1>
+    <tbody>
+        <tr>
+            <td><i class="bi bi-person-fill"></i> Nome</td>
+            <td><?= $nome??'Não definido';?></td>
+        </tr>
 
-                <?php
-                    $produto = "Notebook Dell Inspiron 15";
+        <tr>
+            <td><i class="bi bi-calendar-check-fill"></i> Idade</td>
+            <td><?= $idade??'Não definido' ?></td>
+        </tr>
 
-                    $categoria = "Informática";
+        <tr>
+            <td><i class="bi bi-briefcase-fill"></i> Profissão</td>
+            <td><?= $profissao??'Não definido' ?></td>
+        </tr>
 
-                    $preco = "3499.90";
+        <tr>
+            <td><i class="bi bi-cash-coin"></i> Salário</td>
+            <td>R$ <?= $salario??'Não definido' ?></td>
+        </tr>
 
-                    $estoque ="300";
+        <tr>
+            <td><i class="bi bi-geo-alt-fill"></i> Estado</td>
+            <td><?= $estado??'Não definido' ?></td>
+        </tr>
 
-                    
-                ?>
-                <h2>Cadastro de produto</h2>
-                <table>
-                    <tr>
-                        <td class="label" width="250">👤 produto</td>
-                        <td class="value"><?= $produto??'nao definido' ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">🎂 categoria</td>
-                        <td class="value"><?= $categoria??'nao definido' ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">💼 preco</td>
-                        <td class="value"><?= $preco??'nao definido' ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">💰 estoque</td>
-                        <td class="value"><?= $estoque??'nao definido' ?></td>
-                    </tr>
-                    
-                </table>
+        <tr>
+            <td><i class="bi bi-envelope-fill"></i> E-mail</td>
+            <td><?= $email??'Não definido' ?></td>
+        </tr>
+
+        <tr>
+            <td><i class="bi bi-phone-fill"></i> Celular</td>
+            <td><?= $celular??'Não definido' ?></td>
+        </tr>
+
+        <tr>
+            <td><i class="bi bi-calendar-date-fill"></i> Data de nascimento</td>
+            <td><?= $datanascimento??'Não definido' ?></td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>Desafio 2 Cadastro simples de produto</h1>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th style="width:250px">Produto</th>
+                <th>Categoria</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>dados</td>
+                <td>dados</td>
+               
+            </tr>   
+            <tr>
+                <td>dados</td>
+                <td>dados</td>
+               
+            </tr>  
+            <tr>
+                <td>dados</td>
+                <td>dados</td>
+               
+            </tr> 
+            <tr>
+                <td>dados</td>
+                <td>dados</td>
+               
+            </tr>  
+        </tbody>
+    </table>
+</div>
 
 
-                <h1>Desafio3</h1>
 
-                <?php
-                    $produto = "Fone de Ouvido Bluetoot";
 
-                    $precoUnitario = "199.99";
-
-                    $quantidade = "100";
-
-                ?>
-                <h2>produto</h2>
-                <table>
-                    <tr>
-                        <td class="label" width="250">👤 produto</td>
-                        <td class="value"><?= $produto ??'nao definido' ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">🎂 precoUnitario</td>
-                        <td class="value"><?= $precoUnitario??'nao definido' ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">💼 quantidade</td>
-                        <td class="value"><?= $quantidade??'nao definido' ?></td>
-                    </tr>
-                    
-                    
-                </table>
-
-                <h1>Desafio4</h1>
-
-                <?php
-                    $vendedor = "joao silva";
-
-                    $totalVendido = "16000.00";
-
-                    $percentualComissao = "10";
-
-                ?>
-                <h2>Comissao de vendedor</h2>
-                <table>
-                    <tr>
-                        <td class="label" width="250">👤 vendedor</td>
-                        <td class="value"><?= $vendedor??'nao definido' ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">🎂 Total vendas</td>
-                        <td class="value"><?= $totalVendido??'nao definido' ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">💼 $percentualComissao</td>
-                        <td class="value"><?= $quantidade??'nao definido' ?></td>
-                    </tr>
-                    
-                    
-                </table>
-
-                <h1>Desafio5</h1>
-
-                <?php
-                    $aluno = "carlos";
-
-                    $nota1 = "8.7";
-
-                    $nota2 = "9.6";
-
-                    $nota3 = "7.8";
-
-                ?>
-                <h2>media de notas</h2>
-                <table>
-                    <tr>
-                        <td class="label" width="250">👤 aluno</td>
-                        <td class="value"><?= $aluno??'nao definido' ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">🎂 nota1</td>
-                        <td class="value"><?= $nota1??'nao definido' ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">💼 $nota2</td>
-                        <td class="value"><?= $nota2??'nao definido' ?></td>
-                    </tr>
-                    <tr>
-                        <td class="label">💼 $nota3</td>
-                        <td class="value"><?= $nota3??'nao definido' ?></td>
-                    </tr>
-                    
-                </table>
-
+                </div>
             </div>
         </div>
-
-
     </main>
+    <!-- footer -->
     <?php require_once '../componentes/footer.php' ?>
-
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
