@@ -1,8 +1,10 @@
 <?php require_once __DIR__ . '/componentes/config.php' ?>
 <?php require_once __DIR__ . '/componentes/rotas.php' ?>
 <?php require_once __DIR__ . '/componentes/conexao.php' ?>
+<?php require_once __DIR__ . '/query/query_produtos.php' ?>
 <!DOCTYPE html>
 <html lang="pt-BR" data-bs-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,21 +19,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
 
-     <?php require_once APP_COMPONENTES.'/sibebar.php';?>
+    <?php require_once APP_COMPONENTES . '/sibebar.php'; ?>
 
     <section class="dashboard-wrapper" id="mainWrapper">
-        
-        <?php require_once APP_COMPONENTES.'/header.php';?>
+
+        <?php require_once APP_COMPONENTES . '/header.php'; ?>
 
         <main class="p-4 flex-grow-1">
-            
+
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
                 <div>
                     <h2 class="fw-bold mb-1">Produtos</h2>
@@ -58,26 +61,65 @@
             </div>
 
             <div class="row g-4 mb-4">
-                <div class="col-12 col-sm-6 col-xl-3">
-                    Aqui conteúdo
-                </div>               
-            </div>
+                <div class="col-12 ">
 
-            
+
+                    <div class="table-responsive">
+
+                        <div class="container mt-5">
+
+                            <h3 class="mb-4">Lista de Produtos</h3>
+
+                            <table class="table table-striped table-hover table-bordered align-middle">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Nr</th>
+                                        <th>Produto</th>
+                                        <th>Categoria</th>
+                                        <th>Preço</th>
+                                        <th class="text-center">Ação</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <?php foreach($dados as $produtos){?>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><?php echo $produtos['nome']?></td>
+                                        <td><?php echo $produtos['categoria']?></td>
+                                        <td><?php echo $produtos['preco']?></td>
+                                        <?php $encId = encrypt_secure($produtos['id'],'e');  ?>
+                                        <td class="text-center">
+                                            <a href="produto_editar.php?id=<?= urlencode($encId); ?>" class="btn btn-warning btn-sm">Editar</a>
+                                            <a href="excluir.php?id=1" class="btn btn-danger btn-sm">Excluir</a>
+                                        </td>
+                                    </tr>
+                                        <?php } ?>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
 
         </main>
 
-         <?php require_once APP_COMPONENTES.'/footer.php';?>
+        <?php require_once APP_COMPONENTES . '/footer.php'; ?>
     </section>
 
-   
 
-    
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-   <script src="assets/script.js"></script>
+    <script src="assets/script.js"></script>
 </body>
+
 </html>

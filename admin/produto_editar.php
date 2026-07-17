@@ -1,6 +1,7 @@
 <?php require_once __DIR__ . '/componentes/config.php' ?>
 <?php require_once __DIR__ . '/componentes/rotas.php' ?>
 <?php require_once __DIR__ . '/componentes/conexao.php' ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR" data-bs-theme="light">
 <head>
